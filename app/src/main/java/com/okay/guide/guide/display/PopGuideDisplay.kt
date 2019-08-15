@@ -23,7 +23,7 @@ class PopGuideDisplay(window: Window) : GuideByDecorView(window) {
                     )
                 id = View.generateViewId()
             }
-            window.decorView.findViewById<ViewGroup>(android.R.id.content)?.addView(anchorLayout)
+            (window.decorView as ViewGroup).addView(anchorLayout)
         }
         return anchorLayout
     }

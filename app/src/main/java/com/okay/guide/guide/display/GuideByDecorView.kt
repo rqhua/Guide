@@ -27,7 +27,7 @@ open class GuideByDecorView(var window: Window) : IDisplayGuide<AbsGuideView> {
     private var container: ViewGroup? = null
     open fun getContainer(): ViewGroup? {
         if (container == null) {
-            container = window.decorView.findViewById(android.R.id.content)
+            container = window.decorView as ViewGroup
         }
         return container
     }
