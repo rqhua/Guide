@@ -10,20 +10,20 @@ import java.util.*
  * @author Create by rqhua
  * @date 2019-08-12 下午3:59
  */
-class GuidePresenter : IGuidHost {
+class GuidePresenter<T : AbsGuideView> : IGuidHost {
     private val TAG = "GuidePresenter"
     /**
      * 正向引导数据
      */
-    val guideStack = LinkedList<AbsGuideView>()
+    val guideStack = LinkedList<T>()
     /**
      * 回退引导数据
      */
-    val guideBackStack = LinkedList<AbsGuideView>()
+    val guideBackStack = LinkedList<T>()
     /**
      * 用于显示引导
      */
-    var guideDisplay: IDisplayGuide<AbsGuideView>? = null
+    var guideDisplay: IDisplayGuide<T>? = null
     /**
      * 从第一个开始的引导
      */
@@ -102,11 +102,11 @@ class GuidePresenter : IGuidHost {
         }
     }
 
-    fun addGuideView(guideView: AbsGuideView?) {
+    fun addGuideView(guideView: T?) {
         guideStack.notNullToLast(guideView)
     }
 
-    fun removeGuideView(guideView: AbsGuideView?) {
+    fun removeGuideView(guideView: T?) {
         guideStack.notNullToRemove(guideView)
     }
 }

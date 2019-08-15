@@ -18,47 +18,34 @@ import java.util.*
  * @author Create by rqhua
  * @date 2019-08-12 下午5:23
  */
-fun Activity.guider(display: IDisplayGuide<AbsGuideView>? = null, init: GuidePresenter.() -> Unit): GuidePresenter {
-    return GuidePresenter().apply {
-        guideDisplay = display ?: GuideByDecorView(window)
+
+inline fun <T:AbsGuideView> Activity.guider(display: IDisplayGuide<T>, init: GuidePresenter<T>.() -> Unit): GuidePresenter<T> {
+    return GuidePresenter<T>().apply {
+        guideDisplay = display
         init()
     }
 }
 
-fun Fragment.guider(display: IDisplayGuide<AbsGuideView>? = null, init: GuidePresenter.() -> Unit): GuidePresenter {
-    return GuidePresenter().apply {
-        if (activity?.window != null) {
-            guideDisplay = display ?: GuideByDecorView(activity!!.window)
+inline fun <T:AbsGuideView> Fragment.guider(display: IDisplayGuide<T>, init: GuidePresenter<T>.() -> Unit): GuidePresenter<T> {
+    return GuidePresenter<T>().apply {
+        if (activity != null) {
+            guideDisplay = display
             init()
         }
     }
 }
 
-fun AlertDialog.guider(display: IDisplayGuide<AbsGuideView>? = null, init: GuidePresenter.() -> Unit): GuidePresenter {
-    return GuidePresenter().apply {
-        guideDisplay = display ?: GuideByDecorView(window)
+inline fun <T:AbsGuideView> AlertDialog.guider(display: IDisplayGuide<T>, init: GuidePresenter<T>.() -> Unit): GuidePresenter<T> {
+    return GuidePresenter<T>().apply {
+        guideDisplay = display
         init()
     }
 }
 
-fun Dialog.guider(display: IDisplayGuide<AbsGuideView>? = null, init: GuidePresenter.() -> Unit): GuidePresenter {
-    return GuidePresenter().apply {
-        guideDisplay = display ?: GuideByDecorView(window)
+inline fun <T:AbsGuideView> Dialog.guider(display: IDisplayGuide<T>, init: GuidePresenter<T>.() -> Unit): GuidePresenter<T> {
+    return GuidePresenter<T>().apply {
+        guideDisplay = display
         init()
-    }
-}
-
-fun Window.addGuideView(guideView: AbsGuideView?, attached: () -> Unit) {
-    if (guideView?.guidView is View) {
-        (decorView.findViewById<View>(android.R.id.content) as? FrameLayout)?.addView(guideView.guidView)
-        attached.invoke()
-    }
-}
-
-fun Window.removeGuideView(guideView: AbsGuideView?, removed: () -> Unit) {
-    if (guideView?.guidView is View) {
-        (decorView.findViewById<View>(android.R.id.content) as? FrameLayout)?.removeView(guideView.guidView)
-        removed.invoke()
     }
 }
 

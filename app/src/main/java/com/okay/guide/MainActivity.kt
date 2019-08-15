@@ -7,6 +7,7 @@ import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.TextView
+import com.rqhua.noviceguide.guide.display.GuideByDecorView
 import com.rqhua.noviceguide.guide.display.PopGuideDisplay
 import com.rqhua.noviceguide.guide.guider
 import com.rqhua.noviceguide.guide.guidview.AbsGuideView
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         //全屏引导
         fullScreen?.setOnClickListener {
-            guider {
+            guider(GuideByDecorView<AbsGuideView>(window)) {
                 addGuideView(GuidView(1))
                 addGuideView(GuidView(2))
                 addGuideView(GuidView(3))
@@ -33,7 +34,7 @@ class MainActivity : AppCompatActivity() {
 
         popGuid?.setOnClickListener {
             //弹出式引导
-            guider(PopGuideDisplay(window)) {
+            guider(PopGuideDisplay<AbsPopGuideView>()) {
                 // LEFT/START
                 addGuideView(PopGuideView("Left_Top", Gravity.LEFT).apply { anchor = popGuid })
                 addGuideView(PopGuideView("Left_Center", Gravity.START or Gravity.CENTER).apply { anchor = popGuid })
