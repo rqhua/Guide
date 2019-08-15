@@ -1,12 +1,12 @@
-package com.okay.guide.guide.guidview
+package com.rqhua.noviceguide.guide.guidview
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.Animation
-import com.okay.guide.guide.IGuidHost
-import com.okay.guide.guide.removeChildById
+import com.rqhua.noviceguide.guide.IGuidHost
+import com.rqhua.noviceguide.guide.removeChildById
 
 /**
  * 定义显示与隐藏方法及回调,新手引导View要实现此接口

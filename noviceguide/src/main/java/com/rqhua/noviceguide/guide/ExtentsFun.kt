@@ -1,4 +1,4 @@
-package com.okay.guide.guide
+package com.rqhua.noviceguide.guide
 
 import android.app.Activity
 import android.app.Dialog
@@ -8,9 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.Window
 import android.widget.FrameLayout
-import com.okay.guide.guide.display.GuideByDecorView
-import com.okay.guide.guide.display.IDisplayGuide
-import com.okay.guide.guide.guidview.AbsGuideView
+import com.rqhua.noviceguide.guide.display.GuideByDecorView
+import com.rqhua.noviceguide.guide.display.IDisplayGuide
+import com.rqhua.noviceguide.guide.guidview.AbsGuideView
 import java.util.*
 
 /**

@@ -1,10 +1,10 @@
-package com.okay.guide.guide.display
+package com.rqhua.noviceguide.guide.display
 
 import android.view.View
 import android.view.ViewGroup
 import android.view.Window
 import android.widget.FrameLayout
-import com.okay.guide.guide.guidview.AnchorLayout
+import com.rqhua.noviceguide.guide.guidview.AnchorLayout
 
 /**
  * @author Create by rqhua

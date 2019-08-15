@@ -1,8 +1,8 @@
-package com.okay.guide.guide
+package com.rqhua.noviceguide.guide
 
 import android.util.Log
-import com.okay.guide.guide.display.IDisplayGuide
-import com.okay.guide.guide.guidview.AbsGuideView
+import com.rqhua.noviceguide.guide.display.IDisplayGuide
+import com.rqhua.noviceguide.guide.guidview.AbsGuideView
 import java.util.*
 
 /**

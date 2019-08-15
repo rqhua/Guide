@@ -7,10 +7,10 @@ import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.TextView
-import com.okay.guide.guide.display.PopGuideDisplay
-import com.okay.guide.guide.guider
-import com.okay.guide.guide.guidview.AbsGuideView
-import com.okay.guide.guide.guidview.AbsPopGuideView
+import com.rqhua.noviceguide.guide.display.PopGuideDisplay
+import com.rqhua.noviceguide.guide.guider
+import com.rqhua.noviceguide.guide.guidview.AbsGuideView
+import com.rqhua.noviceguide.guide.guidview.AbsPopGuideView
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.guide_sample_layout.view.*
 

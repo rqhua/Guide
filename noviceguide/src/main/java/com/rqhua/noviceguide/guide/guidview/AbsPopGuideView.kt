@@ -1,13 +1,9 @@
-package com.okay.guide.guide.guidview
+package com.rqhua.noviceguide.guide.guidview
 
 import android.graphics.Rect
-import android.util.DisplayMetrics
 import android.util.Log
-import android.view.Gravity
-import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.FrameLayout
 
 /**
  * 根据位置弹出引导的引导 view

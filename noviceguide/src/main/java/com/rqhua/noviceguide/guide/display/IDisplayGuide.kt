@@ -1,7 +1,7 @@
-package com.okay.guide.guide.display
+package com.rqhua.noviceguide.guide.display
 
 import android.view.LayoutInflater
-import com.okay.guide.guide.guidview.AbsGuideView
+import com.rqhua.noviceguide.guide.guidview.AbsGuideView
 
 /**
  * 定义加载显示引导View的方法

@@ -1,4 +1,4 @@
-package com.okay.guide.guide.guidview
+package com.rqhua.noviceguide.guide.guidview
 
 import android.content.Context
 import android.graphics.Rect
@@ -7,6 +7,7 @@ import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
 import java.lang.IllegalArgumentException
+import java.util.*
 import kotlin.math.max
 
 /**

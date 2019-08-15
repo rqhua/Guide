@@ -1,11 +1,11 @@
-package com.okay.guide.guide.display
+package com.rqhua.noviceguide.guide.display
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.view.Window
-import com.okay.guide.guide.guidview.AbsGuideView
-import com.okay.guide.guide.guidview.initAndAddToParent
-import com.okay.guide.guide.guidview.removeFromeParent
+import com.rqhua.noviceguide.guide.guidview.AbsGuideView
+import com.rqhua.noviceguide.guide.guidview.initAndAddToParent
+import com.rqhua.noviceguide.guide.guidview.removeFromeParent
 
 /**
  * @author Create by rqhua
