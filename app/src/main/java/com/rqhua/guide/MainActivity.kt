@@ -6,23 +6,20 @@ import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
-import com.okay.guide.R
-import com.rqhua.noviceguide.guide.display.GuideByDecorView
-import com.rqhua.noviceguide.guide.display.PopGuideDisplay
-import com.rqhua.noviceguide.guide.guider
+import com.rqhua.collection.R
+import com.rqhua.guide.dummy.DummyContent
 import com.rqhua.noviceguide.guide.guidview.AbsGuideView
 import com.rqhua.noviceguide.guide.guidview.AbsPopGuideView
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.guide_sample_fullscreen_layout.view.*
 import kotlinx.android.synthetic.main.guide_sample_layout.view.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), ItemFragment.OnListFragmentInteractionListener {
     private val TAG = "MainActivity"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        //全屏引导
+        supportFragmentManager.beginTransaction().replace(android.R.id.content, ItemFragment.newInstance(3))
+            .commitAllowingStateLoss()
+        /*//全屏引导
         fullScreen?.setOnClickListener {
             guider(GuideByDecorView<AbsGuideView>(window)) {
                 addGuideView(GuidView(1))
@@ -57,8 +54,12 @@ class MainActivity : AppCompatActivity() {
                 addGuideView(PopGuideView("Bottom_Right", Gravity.BOTTOM or Gravity.RIGHT).apply { anchor = popGuid })
                 startGuid()
             }
-        }
+        }*/
 
+
+    }
+
+    override fun onListFragmentInteraction(item: DummyContent.DummyItem?) {
 
     }
 
