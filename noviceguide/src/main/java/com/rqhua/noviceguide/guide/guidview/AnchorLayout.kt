@@ -109,7 +109,12 @@ class AnchorLayout @JvmOverloads constructor(context: Context, attrs: AttributeS
      * 根据锚点信息确定child的坐标
      */
     private fun childLocation(child: View) {
-        childRect.set(0, 0, child.measuredWidth, child.measuredHeight)
+        childRect.set(
+            0,
+            0,
+            child.measuredWidth,
+            child.measuredHeight
+        )
         for (pair in viewsGrivity) {
             if (pair.first === child) {
                 when (pair.second) {

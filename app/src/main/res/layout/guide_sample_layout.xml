@@ -9,14 +9,21 @@
               android:orientation="vertical">
 
     <TextView
-            android:id="@+id/next"
+            android:id="@+id/pop_tips"
+            style="@style/guidTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/pop_next"
             style="@style/guidTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="next"/>
 
     <TextView
-            android:id="@+id/pre"
+            android:id="@+id/pop_pre"
             style="@style/guidTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

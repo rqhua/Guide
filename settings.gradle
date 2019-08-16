@@ -1,1 +1,1 @@
-include ':app', ':noviceguide'
+include ':app', ':noviceguide', ':base'

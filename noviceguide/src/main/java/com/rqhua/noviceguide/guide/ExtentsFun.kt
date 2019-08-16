@@ -6,9 +6,6 @@ import android.support.v4.app.Fragment
 import android.support.v7.app.AlertDialog
 import android.view.View
 import android.view.ViewGroup
-import android.view.Window
-import android.widget.FrameLayout
-import com.rqhua.noviceguide.guide.display.GuideByDecorView
 import com.rqhua.noviceguide.guide.display.IDisplayGuide
 import com.rqhua.noviceguide.guide.guidview.AbsGuideView
 import java.util.*
