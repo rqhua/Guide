@@ -12,7 +12,7 @@ import android.view.ViewGroup
 import com.rqhua.collection.R
 
 import com.rqhua.guide.dummy.DummyContent
-import com.rqhua.guide.dummy.DummyContent.DummyItem
+import com.rqhua.guide.dummy.clear
 import com.rqhua.guide.dummy.initItems
 import com.rqhua.guide.dummy.item
 
@@ -20,7 +20,7 @@ class ItemFragment : Fragment() {
 
     private var columnCount = 1
 
-    private var listener: OnListFragmentInteractionListener? = null
+    private var listener: OnFragmentInteractionListener? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,10 +28,11 @@ class ItemFragment : Fragment() {
             columnCount = it.getInt(ARG_COLUMN_COUNT)
         }
         initItems {
+            clear()
             item {
-                title = "222"
-                describe = "dafdafds"
-                clazz = ItemFragment::class.java
+                title = "新手引导封装"
+                describe = "处理引导view的显示与隐藏"
+                clazz = GuideFragment::class.java
             }
         }
     }
@@ -55,7 +56,7 @@ class ItemFragment : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        if (context is OnListFragmentInteractionListener) {
+        if (context is OnFragmentInteractionListener) {
             listener = context
         } else {
             throw RuntimeException(context.toString() + " must implement OnListFragmentInteractionListener")
@@ -67,16 +68,12 @@ class ItemFragment : Fragment() {
         listener = null
     }
 
-    interface OnListFragmentInteractionListener {
-        fun onListFragmentInteraction(item: DummyItem?)
-    }
-
     companion object {
 
         const val ARG_COLUMN_COUNT = "column-count"
 
         @JvmStatic
-        fun newInstance(columnCount: Int) =
+        fun newInstance(columnCount: Int = 1) =
             ItemFragment().apply {
                 arguments = Bundle().apply {
                     putInt(ARG_COLUMN_COUNT, columnCount)

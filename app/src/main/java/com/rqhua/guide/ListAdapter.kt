@@ -1,26 +1,23 @@
 package com.rqhua.guide
 
+
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.rqhua.collection.R
-
-
-import com.rqhua.guide.ItemFragment.OnListFragmentInteractionListener
 import com.rqhua.guide.dummy.DummyContent.DummyItem
-
 import kotlinx.android.synthetic.main.fragment_item.view.*
 
 /**
  * [RecyclerView.Adapter] that can display a [DummyItem] and makes a call to the
- * specified [OnListFragmentInteractionListener].
+ * specified [OnFragmentInteractionListener].
  * TODO: Replace the implementation with code for your data type.
  */
 class ListAdapter(
     private val mValues: List<DummyItem>,
-    private val mListener: OnListFragmentInteractionListener?
+    private val mListener: OnFragmentInteractionListener?
 ) : RecyclerView.Adapter<ListAdapter.ViewHolder>() {
 
     private val mOnClickListener: View.OnClickListener
@@ -30,7 +27,7 @@ class ListAdapter(
             val item = v.tag as DummyItem
             // Notify the active callbacks interface (the activity, if the fragment is attached to
             // one) that an item has been selected.
-            mListener?.onListFragmentInteraction(item)
+            mListener?.onFragmentInteraction(item)
         }
     }
 
