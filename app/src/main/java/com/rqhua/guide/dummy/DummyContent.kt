@@ -35,4 +35,8 @@ fun DummyContent.item(init: DummyContent.DummyItem.() -> Unit) {
     ITEMS.add(DummyContent.DummyItem().apply(init))
 }
 
+fun DummyContent.clear() {
+    ITEMS.clear()
+}
+
 
